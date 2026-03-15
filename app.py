@@ -5,6 +5,15 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 import io
 import os
+import spacy
+import subprocess
+import sys
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
 
 from utils.extractor import extract_text
 from utils.analyzer import load_job_roles, analyze_resume
