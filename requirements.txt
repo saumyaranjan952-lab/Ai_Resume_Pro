@@ -1,9 +1,10 @@
 streamlit
 PyPDF2
 python-docx
-spacy
+spacy==3.7.2
+bils==0.7.11
 pandas
-numpy
+numpy==1.26.4
 scikit-learn
 plotly
 reportlab
